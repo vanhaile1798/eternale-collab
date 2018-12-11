@@ -19,7 +19,10 @@
     font-family: GreatVibes;
     src: url('/Font/GreatVibes-Regular.otf');
 }
-
+@font-face {
+    font-family: Lato;
+    src: url('/Font/Lato-Regular.ttf');
+}
 /*END FONTS*/
 
 
@@ -843,6 +846,10 @@ h2 {
     margin-bottom: 16px;
 }
 
+.contactform--top label, .contactform--top input, .contactform--top textarea {
+    font-family: Lato;
+}
+
 .contactform--top--top, .contactform--top--bottom {
     display: flex;
     justify-content: space-between;
@@ -959,6 +966,7 @@ textarea {
 
 .main1--top--center--item--right h3, p {
     margin: 0;
+    font-family: Lato;
 }
 
 .main1--top--center--item--right h3 {
@@ -1048,6 +1056,7 @@ textarea {
     margin-bottom: 32px;
     text-transform: uppercase;
     font-size: 72px;
+    font-family: Basker;
 }
 
 .main--book--center--content {
@@ -1065,6 +1074,8 @@ textarea {
     padding-bottom: 4px;
     margin-bottom: 4px;
     color: #b9a155;
+    font-family: Basker;
+    font-size: 20px;
 }
 
 .main--book--center--content--calendar--weekdays {
@@ -1083,6 +1094,7 @@ textarea {
     padding: 8px 0;
     transition: all .3s ease;
     position: relative;
+    font-family: Basker;
 }
 .main--book--center--content--calendar--days {
     color: #eae2c5;
@@ -1157,6 +1169,12 @@ li[class="main--book--center--content--calendar--days__unavailable"]:hover::befo
 .main--book--center--content--form {
     text-align: left;
     color: #b9a155;
+
+}
+
+.main--book--center--content--form label {
+    font-family: Basker;
+    font-size: 20px;
 }
 
 .main--book--center--content--form--input {
@@ -1196,8 +1214,10 @@ ul {
 .main--book--center--content--calendar--weekdays li {
     /*flex: 1;*/
     color: #b9a155;
-    padding: 8px 0;
+    /*padding: 4px 0;*/
     width: calc(100% / 7);
+    font-family: Lato;
+    font-size: 12px;
 }
     
     /*----------------------------- End BOOK Section -----------------------------*/

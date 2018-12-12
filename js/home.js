@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let btnHomeExplore = document.querySelector('.home-sildebar-btn');
+    let btnHomeExplore = document.querySelector('.home-slidebar-btn');
     let homeExplore = document.querySelector('.home-explore');
     let home = document.querySelector('.home');
     let closeHomeExplore = document.querySelector('#btn-home-explore-close');
     let openExplore = document.querySelector('#btn-open-explore');
+    let contentHome2 = document.querySelector('.slide-content-main2');
 
     btnHomeExplore.addEventListener('click', function () {
         home.classList.toggle('active');
+        contentHome2.classList.toggle('active');
         if (homeExplore.style.maxHeight) {
             homeExplore.style.maxHeight = null;
         } else {
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     closeHomeExplore.addEventListener('click', function () {
         home.classList.toggle('active');
+        contentHome2.classList.toggle('active');
         if (homeExplore.style.maxHeight) {
             homeExplore.style.maxHeight = null;
         } else {

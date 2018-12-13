@@ -1,4 +1,4 @@
-FONTS*/
+/*FONTS*/
 @font-face {
     font-family: FreightBigPro;
     src: url(/Font/FreightBigProMedium.otf);
@@ -203,6 +203,7 @@ nav {
     transition: transform 600ms;
     max-width: 100%;
     object-fit: fill;
+    height: 100%;
 }
 .menu-dropdown-card:hover::before {
     opacity: 0;

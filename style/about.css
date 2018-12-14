@@ -782,6 +782,36 @@ p[class="col--left--main--main--section--pcustom"] {
 
 /*-----------------------END ABOUT US MAIN----------------------------*/
 
+/*RESPONSIVE FOR ABOUT US MAIN*/
+@media (max-width: 1367px) {
+    .col--left--main--overview {
+        width: 600px;
+    }
+    .col--left--main--overview--item {
+        width: 120px;
+    }
+    .col--left--main--overview--item--content::before {
+        content: '';
+        position: absolute;
+        border-top: 25px solid #BAA256;
+        border-left: 44px solid transparent;
+        border-right: 44px solid transparent;
+        bottom: -25px;
+        left: -2px;
+    }
+    .col--left--main--overview--item--content::after {
+        content: '';
+        position: absolute;
+        border-top: 25px solid #222222;
+        border-left: 43px solid transparent;
+        border-right: 43px solid transparent;
+        bottom: -23px;
+        left: -1px;
+    }
+}
+/*END RESPONSIVE FOR ABOUT US MAIN*/
+
+
 /*----------------------------------------------- FOOTER ---------------------------*/
 
 @font-face {
@@ -837,6 +867,7 @@ p[class="col--left--main--main--section--pcustom"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 112px;
+    position: relative;
 }
 
 .main--footer--content--list, .main--footer--content--follow--about {
@@ -917,6 +948,7 @@ p[class="col--left--main--main--section--pcustom"] {
 .main--footer--wrapper {
     background: #363636;
     padding: 0 56px;
+    /*position: relative;*/
 }
 
 p[class='main--footer--copyright'] {
@@ -953,7 +985,7 @@ p[class='main--footer--copyright'] {
 }
 
 .main--footer--content--follow--wrapper {
-    position: relative;
+    /*position: relative;*/
     height: 100%;
 }
 .main--footer--content--follow--totop {
@@ -970,7 +1002,7 @@ p[class='main--footer--copyright'] {
 .main--footer--content--follow--totop--wrapper {
     position: absolute;
     right: -10px;
-    bottom: 0;
+    bottom: 32px;
 }
 .main--footer--content--follow--totop::before {
       content: '';
@@ -1035,6 +1067,21 @@ ul[class="main--footer--content--follow--followus"] {
     color: #b9a155;
 }
 /*----------------------------------------------- End FOOTER --------------------------*/
+
+/*RESPONSIVE FOR FOOTER*/
+@media (max-width: 1367px) {
+   .main--footer--content {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 224px;
+   }
+   .main--footer--wrapper {
+    padding: 0 192px;
+   }
+   .main--footer--content--follow--totop--wrapper {
+    right: -146px;
+   }
+}
+/*END RESPONSIVE FOR FOOTER*/
 
 
 /*------------------------IMPORTED FROM LOCATION.CSS-------------------*/
@@ -1501,7 +1548,8 @@ button.bys-btn:hover {
 
 .profile_info {
   padding: 10px 10px 0px 10px;
-  height: 123px;
+  /*height: 123px;*/
+  height: auto;
   color: black;
   /*font-family: Futura PT;*/
   font-size: 18px;

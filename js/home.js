@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let closeHomeExplore = document.querySelector('#btn-home-explore-close');
     let openExplore = document.querySelector('#btn-open-explore');
     let contentHome2 = document.querySelector('.slide-content-main2');
+    let prevSlide = document.querySelector('.swiper-button-prev');
+    let nextSlide = document.querySelector('.swiper-button-next');
+    let menuItem = document.querySelectorAll('.menu-item');
+    // Added slide number
+    let currentSlide = document.querySelector('.swiper-pagination-current');
+    console.log(currentSlide.innerHTML);
+
 
     btnHomeExplore.addEventListener('click', function () {
         home.classList.toggle('active');
@@ -32,50 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // arrowRight = document.querySelector("#arrow-right"),
         // current = 0;
 
-    // Clear all images
-    function reset() {
-        for (let i = 0; i < sliderImages.length; i++) {
-            sliderImages[i].style.display = "none";
-        }
-    }
-
-    // Init slider
-    function startSlide() {
-        reset();
-        sliderImages[0].style.display = "block";
-    }
-
-    // Show prev
-    function slideLeft() {
-        reset();
-        sliderImages[current - 1].style.display = "block";
-        current--;
-    }
-
-    // Show next
-    function slideRight() {
-        reset();
-        sliderImages[current + 1].style.display = "block";
-        current++;
-    }
-
-    // Left arrow click
-    arrowLeft.addEventListener("click", function () {
-        if (current === 0) {
-            current = sliderImages.length;
-        }
-        slideLeft();
-    });
-
-    // Right arrow click
-    arrowRight.addEventListener("click", function () {
-        if (current === sliderImages.length - 1) {
-            current = -1;
-        }
-        slideRight();
-    });
-
-    // startSlide();
 
     let liTags = document.getElementsByTagName('li');
 
@@ -85,5 +48,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     liTags[index].classList.add('main--book--center--content--calendar--days__unavailable');
                 }
             }
+
+    nextSlide.addEventListener('click', function () {
+        menu();
+    });
+    prevSlide.addEventListener('click', function () {
+        menu();
+    });
+
+    setInterval(()=> {
+        menu();
+    }, 100);
+
+    function menu() {
+        let slideActive = document.querySelector('.swiper-slide-active');
+        document.querySelector('.menu-item.active').classList.remove('active');
+        for (x of menuItem) {       
+            if (x.id === slideActive.id) {
+                x.classList.add('active');
+            }
+        }
+    }
     
 }, false);

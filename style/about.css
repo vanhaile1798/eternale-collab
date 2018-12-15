@@ -390,6 +390,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 88px;
+    z-index: 10;
+    height: auto;
+    width: 100%;
 }
 
 .menu-3 {

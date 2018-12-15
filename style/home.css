@@ -311,6 +311,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+  top: 88px;
+  z-index: 10;
+  height: auto;
+  width: 100%;
 }
 
 .menu-3 {
@@ -479,18 +484,58 @@ nav {
 }
 .swiper-button-next--home {
     margin-top: -6px;
-    right: 6px;
+    right: 12px;
     height: 15px;
     top: 97.5%;
     background: none;
+    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+}
+.swiper-button-next--home:before, .swiper-button-prev--home:before {
+    content: '';
+    height: 100%;
+    width: 40%;
+    background: #BAA256;
+    position: absolute;
 }
 .swiper-button-prev--home {
     top: 97.5%;
     height: 15px;
     left: auto;
-    right: 51px;
+    right: 62px;
     margin-top: -6px;
     background: none;
+    display: flex;
+    justify-content: center;
+}
+
+#arrow-right {
+    right: -2px;
+    z-index: 10;
+}
+
+#arrow-left {
+    left: -2px;
+    z-index: 10;
+}
+
+.swiper-button-prev--home:after {
+  content: '';
+  border-top: 8px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 8px solid #BAA256;
+  position: absolute;
+  left: 0px;
+
+}
+.swiper-button-next--home:after {
+  content: '';
+  border-top: 8px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 8px solid #BAA256;
+  position: absolute;
+  right: 0px;
 }
 /*ADD RESPONSIVE FOR NEXT PREVIOUS BUTTON*/
 @media (max-height: 800px) {
@@ -669,7 +714,9 @@ main{
 
 }
 .arrow {
-    color: #b9a155;
+    /*color: #b9a155;*/
+    color: #fff;
+    position: relative;
 }
 
 /*SLIDE 2*/
@@ -1017,10 +1064,10 @@ p[class='slide-content-info--details--time'] {
 
 
 /*----------------------------*/
-@media (max-width: 1500px) {
-    img[class='event'] {
+@media (max-width: 1600px) {
+    /*img[class='event'] {
         height: 400px;
-    }
+    }*/
     main, .slide-content, .main1, .main--book {
         height: calc(100vh - 90px);
     }
@@ -1252,6 +1299,15 @@ img[class='event'] {
 
 
     /*----------------------------------END FOR EVENTS SECTION-----------------------------------*/
+
+    /*-----------------------ADD RESPONSIVE FOR EVENTS SECTION---------------------------*/
+
+    @media (max-width: 1600px) {
+        img[class='event'] {
+        height: 460px;
+    }
+    }
+    /*-----------------------END RESPONSIVE FOR EVENTS SECTION---------------------------*/
     
     /*-------------------------------- For CONTACT Section ------------------------------*/
     
@@ -1391,7 +1447,7 @@ textarea {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 102%;
+    top: 111%;
     height: 50px;
     width: 50px;
 }
@@ -1425,7 +1481,7 @@ textarea {
     border-top: 15px solid #fff;
     border-left: 23px solid transparent;
     border-right: 23px solid transparent;
-    left: -1px;
+    left: 0px;
     bottom: -15px;
 }
 

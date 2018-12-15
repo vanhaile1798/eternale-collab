@@ -1,27 +1,27 @@
 /*FONTS*/
 @font-face {
     font-family: FreightBigPro;
-    src: url(/Font/FreightBigProMedium.otf);
+    src: url('/Font/FreightBigProMedium.otf');
 }
 
 @font-face {
     font-family: FuturaPT;
-    src: url('/Font/FuturaPTLight_0.otf');
+    src: url('../Font/FuturaPTLight_0.otf');
 }
 
 @font-face {
     font-family: Basker;
-    src: url('/Font/BASKERVILLEOLDFACE.TTF');
+    src: url('../Font/BASKERVILLEOLDFACE.TTF');
 }
 
 
 @font-face {
     font-family: GreatVibes;
-    src: url('/Font/GreatVibes-Regular.otf');
+    src: url('../Font/GreatVibes-Regular.otf');
 }
 @font-face {
     font-family: Lato;
-    src: url('/Font/Lato-Regular.ttf');
+    src: url('../Font/Lato-Regular.ttf');
 }
 /*END FONTS*/
 
@@ -76,7 +76,7 @@ nav {
     bottom: 0;
 }
 
-.menu-item:nth-child(3):hover::before, .menu-item:nth-child(4):hover::before, .menu-item:nth-child(5):hover::before, .menu-item:nth-child(6):hover::before, .menu-item:nth-child(7):hover::before {
+.menu-item:nth-child(2):hover::before,.menu-item:nth-child(3):hover::before, .menu-item:nth-child(4):hover::before, .menu-item:nth-child(5):hover::before, .menu-item:nth-child(6):hover::before, .menu-item:nth-child(7):hover::before {
     min-height: 4px;
 }
 .menu-item:nth-child(2):active::before, .menu-item:nth-child(3):active::before, .menu-item:nth-child(4):active::before, .menu-item:nth-child(5):active::before, .menu-item:nth-child(6):active::before, .menu-item:nth-child(7):active::before {
@@ -478,17 +478,27 @@ nav {
     margin-right: 40px;
 }
 .swiper-button-next--home {
-        margin-top: -4px;
-        right: 23px;
-        height: 15px;
-        top: 96.5%;
+    margin-top: -6px;
+    right: 6px;
+    height: 15px;
+    top: 97.5%;
+    background: none;
 }
 .swiper-button-prev--home {
-    top: 96.5%;
+    top: 97.5%;
     height: 15px;
+    left: auto;
     right: 51px;
-    margin-top: -4px;
+    margin-top: -6px;
+    background: none;
 }
+/*ADD RESPONSIVE FOR NEXT PREVIOUS BUTTON*/
+@media (max-height: 800px) {
+    .swiper-button-prev--home, .swiper-button-next--home {
+        top: 96.5%;
+    }
+}
+/*END ADD RESPONSIVE FOR NEXT PREVIOUS BUTTON*/
 /*------------------------------End PaGINATION---------------------------*/
 
 
@@ -509,7 +519,7 @@ body {
 }
 main, .slide-content {
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 80px);
   overflow-y: hidden;
 }
 
@@ -564,7 +574,7 @@ main{
   align-items: center;
   text-align: center;
   width: 100%;
- height: calc(100vh - 90px);
+ height: calc(100vh - 80px);
 }
 
  .slide-content-main {
@@ -1008,6 +1018,12 @@ p[class='slide-content-info--details--time'] {
 
 /*----------------------------*/
 @media (max-width: 1500px) {
+    img[class='event'] {
+        height: 400px;
+    }
+    main, .slide-content, .main1, .main--book {
+        height: calc(100vh - 90px);
+    }
     .menu-item {
     height: 90px;
 }
@@ -1181,7 +1197,7 @@ p[class='slide-content-info--details--time'] {
 }
 
 img[class='event'] {
-    height: 400px;
+    height: 550px;
     width: 100%;
     margin-bottom: 16px;
 }
@@ -1241,7 +1257,7 @@ img[class='event'] {
     
     .main1 {
     display: grid;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     /*grid-template-columns: 60% 40%;*/
     position: relative;
     width: 100%;
@@ -1536,7 +1552,7 @@ textarea {
     .main--book {
     height: calc(100vh - 80px);
     width: 100%;
-    background: url('/img/bg-book.jpg') no-repeat;
+    background: url('../img/bg-book.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -1579,6 +1595,13 @@ textarea {
     color: #b9a155;
     font-family: Basker;
     font-size: 20px;
+    position: relative;
+}
+
+a[class='fa-angle-down--link'] {
+    color: #b9a155;
+    position: absolute;
+    right: 16px;
 }
 
 .main--book--center--content--calendar--weekdays {

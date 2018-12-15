@@ -14,27 +14,27 @@
 /*FONTS*/
 @font-face {
     font-family: FreightBigPro;
-    src: url(/Font/FreightBigProMedium.otf);
+    src: url('../Font/FreightBigProMedium.otf');
 }
 
 @font-face {
     font-family: FuturaPT;
-    src: url('/Font/FuturaPTLight_0.otf');
+    src: url('../Font/FuturaPTLight_0.otf');
 }
 
 @font-face {
     font-family: Basker;
-    src: url('/Font/BASKERVILLEOLDFACE.TTF');
+    src: url('../Font/BASKERVILLEOLDFACE.TTF');
 }
 
 
 @font-face {
     font-family: GreatVibes;
-    src: url('/Font/GreatVibes-Regular.otf');
+    src: url('../Font/GreatVibes-Regular.otf');
 }
 @font-face {
     font-family: Lato;
-    src: url('/Font/Lato-Regular.ttf');
+    src: url('../Font/Lato-Regular.ttf');
 }
 /*END FONTS*/
 
@@ -816,17 +816,17 @@ p[class="col--left--main--main--section--pcustom"] {
 
 @font-face {
     font-family: FreightBigPro;
-    src: url(/fonts/FreightBigProMedium.otf);
+    src: url('../Font/FreightBigProMedium.otf');
 }
 
 @font-face {
     font-family: FuturaPT;
-    src: url('/fonts/FuturaPTLight_0.otf');
+    src: url('../Font/FuturaPTLight_0.otf');
 }
 
 @font-face {
     font-family: Basker;
-    src: url('/fonts/BASKERVILLEOLDFACE.TTF');
+    src: url('../Font/BASKERVILLEOLDFACE.TTF');
 }
 
 .button__frame {
@@ -890,7 +890,7 @@ p[class="col--left--main--main--section--pcustom"] {
     height: 100%;
 }
 
-.main--footer--content--signup a {
+a[class="main--footer--content--signupemail--link"] {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1030,7 +1030,7 @@ p[class='main--footer--copyright'] {
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
-    background: url(/img/TRIP2.png);
+    background: url(../img/TRIP2.png);
     background-size: cover;
     background-position: center;
     margin-bottom: 16px;
